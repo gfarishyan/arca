@@ -1,8 +1,8 @@
 <?php
 
-namespace Arca\Response;
+namespace Gfarishyan\Arca\Response;
 
-use Arca\Exception\ArcaException;
+use Gfarishyan\Arca\Exception\ArcaException;
 use Psr\Http\Message\ResponseInterface as HttpResponseInterface;
 
 class JsonResponse extends BaseResponse {

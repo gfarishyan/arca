@@ -1,6 +1,6 @@
 <?php
 
-namespace Arca\Response;
+namespace Gfarishyan\Arca\Response;
 
 use Psr\Http\Message\ResponseInterface as HttpResponseInterface;
 

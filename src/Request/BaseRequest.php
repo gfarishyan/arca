@@ -1,11 +1,11 @@
 <?php
 
-namespace Arca\Request;
+namespace Gfarishyan\Arca\Request;
 
-use Arca\Configuration;
-use Arca\DataType\DataTypeInterface;
-use Arca\Exception\ArcaException;
-use Arca\Response\JsonResponse;
+use Gfarishyan\Arca\Configuration;
+use Gfarishyan\Arca\DataType\DataTypeInterface;
+use Gfarishyan\Arca\Exception\ArcaException;
+use Gfarishyan\Arca\Response\JsonResponse;
 use GuzzleHttp\Exception\RequestException;
 
 abstract class BaseRequest implements RequestInterface {

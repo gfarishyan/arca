@@ -1,6 +1,6 @@
 <?php
 
-namespace Arca;
+namespace Gfarishyan\Arca;
 
 class OrderExtendedStatusRequest extends OrderStatusRequest
 {

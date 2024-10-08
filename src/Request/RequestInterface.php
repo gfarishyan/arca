@@ -1,6 +1,6 @@
 <?php
 
-namespace Arca\Request;
+namespace Gfarishyan\Arca\Request;
 
 interface RequestInterface {
   /**

@@ -1,9 +1,9 @@
 <?php
 
-namespace Arca;
+namespace Gfarishyan\Arca;
 
-use Arca\DataType\TransactionRequest;
-use Arca\Request\RequestInterface;
+use Gfarishyan\Arca\DataType\TransactionRequest;
+use Gfarishyan\Arca\Request\RequestInterface;
 use GuzzleHttp\Client;
 
 class RegisterOrderRequest extends BaseApiRequest {

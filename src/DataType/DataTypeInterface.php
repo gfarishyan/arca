@@ -1,6 +1,6 @@
 <?php
 
-namespace Arca\DataType;
+namespace Gfarishyan\Arca\DataType;
 
 interface DataTypeInterface {
   public function getType();

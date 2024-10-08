@@ -1,9 +1,9 @@
 <?php
 
-namespace Arca;
+namespace Gfarishyan\Arca;
 
-use Arca\Request\RequestInterface;
-use Arca\Request\JsonRequest;
+use Gfarishyan\Arca\Request\RequestInterface;
+use Gfarishyan\Arca\Request\JsonRequest;
 use GuzzleHttp\Client;
 
 

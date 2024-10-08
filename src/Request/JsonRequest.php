@@ -1,8 +1,8 @@
 <?php
 
-namespace Arca\Request;
+namespace Gfarishyan\Arca\Request;
 
-use Arca\Configuration;
+use Gfarishyan\Arca\Configuration;
 
 class JsonRequest extends BaseRequest {
 

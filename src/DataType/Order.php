@@ -1,6 +1,6 @@
 <?php
 
-namespace Arca\DataType;
+namespace Gfarishyan\Arca\DataType;
 
 class Order extends BaseDataType {
   public $orderNumber;

@@ -1,8 +1,8 @@
 <?php
 
-namespace Arca;
+namespace Gfarishyan\Arca;
 
-use Arca\Request\BaseRequest;
+use Gfarishyan\Arca\Request\BaseRequest;
 
 class RefundRequest extends BaseRequest {
   protected $path = '/refundOrder.do';

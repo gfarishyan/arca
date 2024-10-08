@@ -8,7 +8,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Arca\\": "src/"
+            "Gfarshyan\\Arca\\": "src/"
         }
     },
     "autoload-dev": {

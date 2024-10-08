@@ -1,9 +1,9 @@
 <?php
 
-namespace Arca;
+namespace Gfarishyan\Arca;
 
-use Arca\DataType\TransactionRequest;
-use Arca\Exception\ArcaException;
+use Gfarishyan\Arca\DataType\TransactionRequest;
+use Gfarishyan\Arca\Exception\ArcaException;
 use GuzzleHttp\ClientInterface;
 use GuzzleHttp\Exception\RequestException;
 

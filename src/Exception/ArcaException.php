@@ -1,6 +1,6 @@
 <?php
 
-namespace Arca\Exception;
+namespace Gfarishyan\Arca\Exception;
 
 class ArcaException extends \Exception {
 
