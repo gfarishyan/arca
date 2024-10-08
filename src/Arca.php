@@ -26,6 +26,11 @@ class Arca {
     $this->httpClient = $http_client;
   }
 
+  public function getConfig()
+  {
+      return $this->config;
+  }
+
   public function registerOrder(TransactionRequest $request, $transaction_mode = TransactionRequest::AUTHORIZE_CAPTURE) {
     switch ($transaction_mode) {
       case TransactionRequest::AUTHORIZE_ONLY:
@@ -42,6 +47,7 @@ class Arca {
       throw new ArcaException($e);
     }
 
+    return new ArcaOrderResponse($response);
   }
 
 }

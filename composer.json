@@ -1,6 +1,6 @@
 {
     "name": "gfarishyan/arca",
-    "type": "project",
+    "type": "library",
     "description": "Arca library",
     "require": {
         "php": "^8.1",
