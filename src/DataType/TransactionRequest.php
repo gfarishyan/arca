@@ -29,7 +29,7 @@ class TransactionRequest extends BaseDataType {
   public $type;
 
   protected $map = [
-    'order' => 'order',
+    'orderNumber' => 'orderNumber',
     'amount' => 'amount',
     'currency' => 'currency',
     'returnUrl' => 'returnUrl',

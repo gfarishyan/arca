@@ -5,6 +5,7 @@ namespace Gfarishyan\Arca;
 use Gfarishyan\Arca\Configuration;
 use Gfarishyan\Arca\DataType\TransactionRequest;
 use Gfarishyan\Arca\Exception\ArcaException;
+use Gfarishyan\Arca\Response\ArcaRegsterOrderResponse;
 use GuzzleHttp\ClientInterface;
 use GuzzleHttp\Exception\RequestException;
 
@@ -49,7 +50,7 @@ class Arca {
       throw new ArcaException($e);
     }
 
-    return new ArcaOrderResponse($response);
+    return new ArcaRegsterOrderResponse($response);
   }
 
 }
