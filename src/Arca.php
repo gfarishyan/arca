@@ -2,10 +2,12 @@
 
 namespace Gfarishyan\Arca;
 
+use Gfarishyan\Arca\Configuration;
 use Gfarishyan\Arca\DataType\TransactionRequest;
 use Gfarishyan\Arca\Exception\ArcaException;
 use GuzzleHttp\ClientInterface;
 use GuzzleHttp\Exception\RequestException;
+
 
 class Arca {
 
@@ -17,11 +19,11 @@ class Arca {
     self::TEST_MODE => 'https://ipaytest.arca.am:8445/payment/rest',
   ];
 
-  protected GuzzleHttp\ClientInterface $httpClient;
+  protected ClientInterface $httpClient;
 
   protected Configuration $config;
 
-  public function __constuct(Configuration $config, ClientInterface $http_client) {
+  public function __construct(Configuration $config, ClientInterface $http_client) {
     $this->config = $config;
     $this->httpClient = $http_client;
   }
