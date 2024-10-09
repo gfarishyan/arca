@@ -63,11 +63,10 @@ abstract class BaseRequest implements RequestInterface {
 
     $url_data = $this->buildData($this->data);
     $url_data['password'] = $this->configuration->getPassword();
-print_r($url_data);
+
     try {
       $response = $this->client->request('POST', $postUrl, [
         'query' => $url_data,
-        'debug' => true
       ]);
 
       if ($response->getStatusCode() !== 200) {
