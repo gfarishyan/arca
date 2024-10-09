@@ -2,8 +2,6 @@
 
 namespace Gfarishyan\Arca\Response;
 
-use function React\Promise\map;
-
 class ArcaRegisterOrderResponse {
 
   protected int $errorCode;
@@ -81,10 +79,4 @@ class ArcaRegisterOrderResponse {
   public function getOrderId() {
     return $this->response['orderId'];
   }
-
-  publc function ()
-{
-
-  }
-
 }
