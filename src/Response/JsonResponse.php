@@ -36,5 +36,8 @@ class JsonResponse extends BaseResponse {
 
   }
 
-
+  public function toArray()
+  {
+      return $this->contents;
+  }
 }
