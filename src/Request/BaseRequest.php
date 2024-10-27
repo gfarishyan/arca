@@ -64,7 +64,6 @@ abstract class BaseRequest implements RequestInterface {
     $url_data = $this->buildData($this->data);
     $url_data['password'] = $this->configuration->getPassword();
 
-    file_put_contents('/var/www/websystems_projects/labber/g.log', ['url' => $postUrl,'data' => print_r($url_data, true)], \FILE_APPEND);
     try {
       $response = $this->client->request('POST', $postUrl, [
         'query' => $url_data,
