@@ -14,4 +14,5 @@ class JsonRequest extends BaseRequest {
   public function getBody() {
     return json_encode([$this->type => $this->data]);
   }
+
 }

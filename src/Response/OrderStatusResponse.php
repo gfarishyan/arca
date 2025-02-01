@@ -111,7 +111,15 @@ class OrderStatusResponse implements OrderStatusResponseInterface {
     }
 
     public function getBinding() {
-        return (!empty($this->response['BindingInfo']) && !empty($this->response['BindingInfo']['bindingId'])) ? $this->response['BindingInfo']['bindingId'] : '';
+        if (empty($this->response['bindingInfo'])) {
+            return null;
+        }
+
+        if (empty($this->response['bindingInfo']['bindingId'])) {
+            return null;
+        }
+        $binding_id = $this->response['bindingInfo']['bindingId'];
+        return $binding_id;
     }
 
     public function getAuthDate() {

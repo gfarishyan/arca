@@ -77,6 +77,6 @@ class ArcaRegisterOrderResponse {
   }
 
   public function getOrderId() {
-    return $this->response['orderId'];
+    return $this->response['orderId'] ?? null;
   }
 }

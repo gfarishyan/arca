@@ -35,6 +35,12 @@ class Arca {
       return $this->config;
   }
 
+  public function setConfig(Configuration $config)
+  {
+     $this->config = $config;
+     return $this;
+  }
+
   public function registerOrder(TransactionRequest $request, $transaction_mode = TransactionRequest::AUTHORIZE_CAPTURE) {
     switch ($transaction_mode) {
       case TransactionRequest::AUTHORIZE_ONLY:
@@ -71,6 +77,23 @@ class Arca {
      }
 
      return new OrderStatusResponse($response->toArray());
+  }
+
+  public function capture(TransactionRequest $request) {
+       if ($request->getBindingId()) {
+         $order = new PaymentOrderBinding($this->config, $this->httpClient, $request);
+       } else {
+          $order = new Deposit($this->config, $this->httpClient, $request);
+       }
+
+        try {
+           $response = $order->execute();
+        } catch (RequestException $e) {
+            throw new ArcaException($e->getMessage(), $e->getCode());
+        } catch (\Exception $e ) {
+            throw new ArcaException($e->getMessage(), $e->getCode());
+        }
+        return $response;
   }
 
 }

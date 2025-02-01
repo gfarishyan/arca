@@ -63,10 +63,14 @@ abstract class BaseRequest implements RequestInterface {
 
     $url_data = $this->buildData($this->data);
     $url_data['password'] = $this->configuration->getPassword();
-
+    //$debug = fopen('/var/www/websystems_projects/labber/logs/debug.log', 'a+');
     try {
       $response = $this->client->request('POST', $postUrl, [
         'query' => $url_data,
+         'headers' => [
+             'Content-Type' => $this->getContentType(),
+         ],
+         //'debug' => $debug
       ]);
 
       if ($response->getStatusCode() !== 200) {
@@ -76,8 +80,12 @@ abstract class BaseRequest implements RequestInterface {
       }
     } catch (RequestException  $e) {
       throw new ArcaException($e->getMessage(), $e->getCode(), $e);
+    } catch (\Exception $e) {
+        throw new ArcaException($e->getMessage(), $e->getCode(), $e);
     }
 
+    /*fwrite($debug, $response->getBody());
+    fclose($debug);*/
     return new JsonResponse($response);
   }
 

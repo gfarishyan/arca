@@ -18,6 +18,9 @@ class BaseDataType implements DataTypeInterface {
   }
 
   public function __set($name, $value) {
+    if ($name == 'amount') {
+        $value = (int) $value;
+    }
     $this->$name = $value;
   }
 
@@ -40,6 +43,11 @@ class BaseDataType implements DataTypeInterface {
   public function addDataType(DataTypeInterface $data) {
     $data_type = $data->getType();
     $this->$data_type = $data->toArray();
+  }
+
+  public function getBindingId()
+  {
+      return isset($this->bindingId) ? $this->bindingId : null;
   }
 
   public function toArray() {

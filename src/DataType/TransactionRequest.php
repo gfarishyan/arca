@@ -26,6 +26,8 @@ class TransactionRequest extends BaseDataType {
 
   public $order_id;
 
+  public $clientId;
+
   public $type;
 
   protected $map = [
@@ -38,6 +40,9 @@ class TransactionRequest extends BaseDataType {
     'formUrl' => 'formUrl',
     'order_id' => 'orderId',
     'failUrl' => 'failUrl',
+    'clientId' => 'clientId',
+    'bindingId' => 'bindingId',
+    'mdOrder' => 'MDORDER',
   ];
 
   public function addOrder(Order $order) {
