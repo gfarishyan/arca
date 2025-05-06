@@ -96,4 +96,18 @@ class Arca {
         return $response;
   }
 
+  public function refund(TransactionRequest $request) {
+    $transaction = new RefundRequest($this->config, $this->httpClient, $request);
+   try {
+      $response = $transaction->execute();
+    }catch (RequestException $e) {
+      throw new ArcaException($e->getMessage(), $e->getCode());
+    } catch (\Exception $e ) {
+      throw new ArcaException($e->getMessage(), $e->getCode());
+    }
+    return $response;
+
+  }
+
+
 }
